@@ -14,6 +14,7 @@ class Webhok < ApplicationRecord
   end
 
   def notify_subscriber
-    # do nothing for now
+    payload = { event_type: event_type, timestamp: Time.now, user_id: user.id, url: url}
+    WebhookNotifierJob.perform_later(url, payload)
   end
 end
