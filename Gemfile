@@ -46,9 +46,9 @@ group :development do
   # gem "spring"
 end
 
-
-gem "devise", "~> 4.9"
-
 gem "sidekiq", "~> 7.3"
 
 gem "httparty", "~> 0.22.0"
+
+gem 'jwt'
+gem 'bcrypt'
